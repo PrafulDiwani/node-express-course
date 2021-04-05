@@ -17,6 +17,14 @@ app.get("/users", function (req, res) {
   });
 });
 
+app.get("/user/:id", function (req, res) {
+  res.json({
+    success: true ,
+    message :  'got one user',
+    user : req.params.id  
+  })
+})
+
 app.listen(port, function () {
   console.log(`server listen at ${port}`);
 });
